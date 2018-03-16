@@ -6,9 +6,6 @@ import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 
-/**
- * Created by saikrisv on 27/05/16.
- */
 public class JSonParser {
     public static JSONObject getUserData(int threadID) {
         JSONParser parser = new JSONParser();

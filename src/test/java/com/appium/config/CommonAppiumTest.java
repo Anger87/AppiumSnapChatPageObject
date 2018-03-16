@@ -44,6 +44,7 @@ public class CommonAppiumTest {
         } while (!isElementPresent(By.id("org.wordpress.android:id/me_login_logout_text_view")));
     }
 
+    //TODO - delete try catch, add isdisplayed
     public boolean isElementPresent(By by) {
         try {
             driver.findElement(by);
@@ -80,29 +81,9 @@ public class CommonAppiumTest {
                 .moveTo(endx, starty).release();
     }
 
-    /**
-     * method to set the context to required view.
-     *
-     * @param context view to be set
-     */
-    public void setContext(String context) {
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Set<String> contextNames = driver.getContextHandles();
-        for (String contextName : contextNames) {
-            System.out.println(contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
-        }
-        driver.context((String) contextNames.toArray()[1]); // set context to WEBVIEW_1
-
-        logger.info("Current context" + driver.getContext());
-    }
 
     public void clickBackButton() {
         driver.navigate().back(); //Closes keyboard
-        //driver.navigate().back(); //Comes out of edit mode
     }
 
 
@@ -110,17 +91,9 @@ public class CommonAppiumTest {
         return Thread.currentThread().getStackTrace()[2].getMethodName();
     }
 
-//    public String getPageObjectElemetDescription(Object pageObject, String fieldName) {
-//        try {
-////            return this.getClass().getAnnotation(PageName.class).value() + "::" +
-////                pageObject.getClass().getField(fieldName).getAnnotation(ElementDescription.class)
-////                    .value();
-//        } catch (NoSuchFieldException e) {
-//
-//            e.printStackTrace();
-//        }
-//        return "";
-//    }
-
-
+    public void tapElement(MobileElement element){
+        TouchAction t1 = new TouchAction(driver);
+        t1.tap(element);
+        driver.performTouchAction(t1);
+    }
 }
