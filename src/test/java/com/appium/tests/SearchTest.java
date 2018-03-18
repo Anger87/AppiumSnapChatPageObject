@@ -6,9 +6,9 @@ public class SearchTest extends BaseTest {
 
     @Test
     public void SearchCar() throws InterruptedException {
-        searchCarPage.clickCategory();
-        toolbar.clickMenu();
-        Thread.sleep(6000);
+        menubar = toolbar.clickMenu();
+        profilePage = menubar.clickProfile();
+        profilePage.clickSignInByEmail();
     }
 
 }
