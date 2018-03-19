@@ -1,5 +1,7 @@
 package com.appium.tests;
 
+import com.appium.config.UserProps;
+import com.appium.config.UserCredentials;
 import com.appium.pages.*;
 import com.appium.utility.AppiumDriverBuilder;
 import com.appium.utility.InitScreens;
@@ -11,6 +13,7 @@ import org.testng.annotations.*;
 import java.lang.reflect.Method;
 
 public class BaseTest {
+
     public Logger logger = Logger.getLogger(BaseTest.class);
     protected AppiumDriver driver;
     protected LandingPage landingPage;
@@ -18,6 +21,8 @@ public class BaseTest {
     protected Toolbar toolbar;
     protected Menubar menubar;
     protected ProfilePage profilePage;
+    public UserCredentials userCredentials;
+    UserProps user = new UserProps();
 
     @BeforeSuite
     public void connect() throws Exception {
@@ -29,6 +34,9 @@ public class BaseTest {
 //        landingPage= app.landingPage();
         searchCarPage = app.searchOldCarPage();
         toolbar = app.Toolbar();
+
+
+        userCredentials = new UserCredentials(user.getLogin(),user.getPassword());
     }
 
     @BeforeMethod

@@ -54,8 +54,7 @@
         <dependency>
             <groupId>org.jodd</groupId>
             <artifactId>jodd-props</artifactId>
-            <version>4.2.0</version>
-            <type>pom</type>
+            <version>3.9.1</version>
         </dependency>
 
     </dependencies>
