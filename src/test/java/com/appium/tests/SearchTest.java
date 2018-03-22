@@ -9,6 +9,7 @@ public class SearchTest extends BaseTest {
         menubar = toolbar.clickMenu();
         profilePage = menubar.clickProfile();
         profilePage.clickSignInByEmail();
+
     }
 
 }

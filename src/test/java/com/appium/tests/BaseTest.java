@@ -1,6 +1,7 @@
 package com.appium.tests;
 
-import com.appium.config.UserProps;
+//import com.appium.config.ReadProperties;
+import com.appium.config.ReadProperties;
 import com.appium.config.UserCredentials;
 import com.appium.pages.*;
 import com.appium.utility.AppiumDriverBuilder;
@@ -22,7 +23,7 @@ public class BaseTest {
     protected Menubar menubar;
     protected ProfilePage profilePage;
     public UserCredentials userCredentials;
-    UserProps user = new UserProps();
+    ReadProperties user = new ReadProperties();
 
     @BeforeSuite
     public void connect() throws Exception {
@@ -31,12 +32,12 @@ public class BaseTest {
 
         // init for new page class
         InitScreens app = new InitScreens(driver);
-//        landingPage= app.landingPage();
         searchCarPage = app.searchOldCarPage();
         toolbar = app.Toolbar();
 
-
-        userCredentials = new UserCredentials(user.getLogin(),user.getPassword());
+        //init User credentials
+        user.initProperty("user.properties");
+        userCredentials = new UserCredentials(user.getPropValue("login"),user.getPropValue("password"));
     }
 
     @BeforeMethod
