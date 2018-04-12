@@ -17,5 +17,5 @@ Also you should set emulator or device cabalilities files in \src\test\resources
 User credentials set in \src\test\resources\props\user.properties
 
 To run test from IDE, use testng.xml configuration file. 
-To run test from command line, use 'mvn test' command.
+To run test from command line, use 'mvn test -DcapabilityPropperties=deviceCapability.properties' command.
 Check logs: mavenTestRunLog.txt, appium-server-logs.txt

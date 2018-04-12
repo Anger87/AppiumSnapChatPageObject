@@ -133,3 +133,25 @@ Starting test: Snapchat.LoginTest.LoginLogOut
 2018-04-12 14:02:13 INFO  BaseTest:LoginLogOut:30 - Check Allert message
 2018-04-12 14:02:13 INFO  PopUpPage:clickYesButton:26 - PopUp click Log Out Button
 2018-04-12 14:02:17 INFO  BaseTest:LoginLogOut:34 - Check Landing page opened
+2018-04-12 17:42:24 INFO  BaseTest:beforeMethod:52 - 
+
+:::
+Starting test: Login Logout.LoginTest.LoginLogOut
+2018-04-12 17:42:24 INFO  LandingPage:clickLoginButton:21 - LandingPage click Login Button
+2018-04-12 17:42:26 INFO  LoginPage:logIn:21 - LoginPage Entering UserName: tcontinuum
+2018-04-12 17:42:28 INFO  LoginPage:logIn:24 - LoginPage Entering Password: test12345
+2018-04-12 17:42:30 INFO  LoginPage:logIn:27 - LoginPage click Login Button
+2018-04-12 17:42:48 INFO  NeonHeaderPage:clickProfileButton:22 - NeonHeaderPage click Profile Button
+2018-04-12 17:43:07 INFO  BaseTest:LoginLogOut:16 - Check User name on Profile Page
+2018-04-12 17:43:07 INFO  ProfilePage:getUserName:33 - ProfilePage get UserName
+2018-04-12 17:43:07 INFO  ProfilePage:getFullName:28 - ProfilePage get FullName
+2018-04-12 17:43:07 INFO  ProfilePage:clickSettingButton:22 - ProfilePage click Settings Button
+2018-04-12 17:43:09 INFO  BaseTest:LoginLogOut:21 - Check User name on Settings Page
+2018-04-12 17:43:09 INFO  SettingsPage:getUserName:33 - SettingsPage get UserName
+2018-04-12 17:43:09 INFO  SettingsPage:getFullName:28 - SettingsPage get FullName
+2018-04-12 17:43:09 INFO  SettingsPage:scrollToLogOutButton:38 - Scrolling the veiew until LogOut button shown
+2018-04-12 17:43:09 INFO  CommonAppiumMethods:scrollToElementById:45 - Scroll to element: com.snapchat.android:id/account_actions_logout
+2018-04-12 17:43:20 INFO  SettingsPage:clickLogOutButton:22 - SettingsPage click Log Out Button
+2018-04-12 17:43:21 INFO  BaseTest:LoginLogOut:27 - Check Allert message
+2018-04-12 17:43:21 INFO  PopUpPage:clickYesButton:26 - PopUp click Log Out Button
+2018-04-12 17:43:27 INFO  BaseTest:LoginLogOut:31 - Check Landing page opened

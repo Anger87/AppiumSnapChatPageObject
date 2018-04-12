@@ -10,10 +10,7 @@ public class LoginTest extends BaseTest {
     public void LoginLogOut() {
         softAssert = new SoftAssert();
         loginPage = landingPage.clickLoginButton();
-        loginPage.setUserName(userCredentials.getUserName());
-        loginPage.setPassword(userCredentials.getPassWord());
-
-        neonHeaderPage = loginPage.clickLogInButton();
+        neonHeaderPage = loginPage.logIn(userCredentials.getUserName(),userCredentials.getPassWord());
 
         profilePage = neonHeaderPage.clickProfileButton();
         logger.info("Check User name on Profile Page");

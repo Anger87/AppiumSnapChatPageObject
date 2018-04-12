@@ -17,20 +17,18 @@ public class LoginPage extends CommonAppiumMethods {
         waitForPageToLoad(loginPageObjects.LoginForm);
     }
 
-    public void setUserName(String text){
-        logger.info("LoginPage Entering UserName: " + text);
-        loginPageObjects.UserName.setValue(text);
-    }
+    public NeonHeaderPage logIn(String username, String password) {
+        logger.info("LoginPage Entering UserName: " + username);
+        loginPageObjects.UserName.setValue(username);
 
-    public void setPassword(String text){
-        logger.info("LoginPage Entering Password: " + text);
-        loginPageObjects.Password.setValue(text);
-    }
+        logger.info("LoginPage Entering Password: " + password);
+        loginPageObjects.Password.setValue(password);
 
-    public NeonHeaderPage clickLogInButton(){
         logger.info("LoginPage click Login Button");
         loginPageObjects.LogInButton.click();
+
         return new NeonHeaderPage(driver);
     }
+
 
 }

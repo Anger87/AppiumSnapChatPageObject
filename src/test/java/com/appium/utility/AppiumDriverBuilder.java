@@ -18,7 +18,7 @@ public class AppiumDriverBuilder {
 
     public AppiumDriver build() throws Exception {
 
-        capProperties.initProperty("deviceCapability.properties");
+        capProperties.initProperty(System.getProperty("capabilityPropperties"));
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, capProperties.getPropValue("platformVersion"));
