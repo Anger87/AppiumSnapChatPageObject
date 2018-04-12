@@ -10,10 +10,10 @@ import java.util.List;
 
 public class LandingPageObjects {
 
-    @AndroidFindBy(id = "com.ria.auto:id/indicator")
-    public MobileElement Indicator;
+    @AndroidFindBy(id = "com.snapchat.android:id/registration_page_fragment_container")
+    public MobileElement PageContainer;
 
-    @AndroidFindBy(id = "com.ria.auto:id/tv_go_container")
-    public MobileElement GoButton;
+    @AndroidFindBy(id = "com.snapchat.android:id/login_and_signup_page_fragment_login_button")
+    public MobileElement LoginButton;
 
 }
