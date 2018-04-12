@@ -39,17 +39,21 @@ public class CommonAppiumMethods {
 
     boolean scrollToElementById(String elemId) {
         System.out.println(driver.getPlatformName());
+
         try {
-            logger.info("Scroll to element: " + elemId);
-            AndroidDriver driverAndroid = (AndroidDriver) driver;
-            driverAndroid.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" +
-                    ".scrollIntoView(new UiSelector().resourceId(\"" + elemId + "\").instance(0))");
-            return true;
+            if (driver.getPlatformName().equals("Android")) {
+                logger.info("Scroll to element: " + elemId);
+                AndroidDriver driverAndroid = (AndroidDriver) driver;
+                driverAndroid.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" +
+                        ".scrollIntoView(new UiSelector().resourceId(\"" + elemId + "\").instance(0))");
+                return true;
+            }
         } catch (Exception e) {
             e.printStackTrace();
             logger.info("Scroll to element: " + elemId + " FAILED");
             return false;
         }
+        return false;
     }
 
 
