@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+//TODO - Add take screenshot method
+//TODO - use Java 8 interface methods
 
 public class CommonAppiumMethods {
     public AppiumDriver driver;
@@ -21,7 +23,7 @@ public class CommonAppiumMethods {
         this.driver = driver;
     }
 
-    void waitForPageToLoad(WebElement id) {
+    void waitForElementToLoad(WebElement id) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(id));
     }
@@ -31,8 +33,8 @@ public class CommonAppiumMethods {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(id)));
     }
 
-    WebElement waitForElement(WebElement arg) {
-        waitForPageToLoad(arg);
+    WebElement waitAndGetElement(WebElement arg) {
+        waitForElementToLoad(arg);
         WebElement el = arg;
         return el;
     }

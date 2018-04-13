@@ -14,7 +14,7 @@ public class LoginPage extends CommonAppiumMethods {
     public LoginPage(AppiumDriver<MobileElement> driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), loginPageObjects);
-        waitForPageToLoad(loginPageObjects.LoginForm);
+        waitForElementToLoad(loginPageObjects.LoginForm);
     }
 
     public NeonHeaderPage logIn(String username, String password) {

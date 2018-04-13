@@ -15,7 +15,7 @@ public class SettingsPage extends CommonAppiumMethods {
     public SettingsPage(AppiumDriver<MobileElement> driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), settingsPageObjects);
-        waitForPageToLoad(settingsPageObjects.SettingsView);
+        waitForElementToLoad(settingsPageObjects.SettingsView);
     }
 
     public PopUpPage clickLogOutButton(){

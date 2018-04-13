@@ -16,7 +16,7 @@ import org.testng.asserts.SoftAssert;
 import java.lang.reflect.Method;
 
 public class BaseTest {
-
+//TODO - add debug test class runner
     public Logger logger = Logger.getLogger(BaseTest.class);
     SoftAssert softAssert ;
     protected AppiumDriver driver;

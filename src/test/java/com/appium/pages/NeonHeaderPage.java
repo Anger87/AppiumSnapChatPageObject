@@ -15,7 +15,7 @@ public class NeonHeaderPage extends CommonAppiumMethods {
     public NeonHeaderPage(AppiumDriver<MobileElement> driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), neonHeaderPageObjects);
-        waitForPageToLoad(neonHeaderPageObjects.NeonHeader);
+        waitForElementToLoad(neonHeaderPageObjects.NeonHeader);
     }
 
     public ProfilePage clickProfileButton(){

@@ -15,7 +15,7 @@ public class PopUpPage extends CommonAppiumMethods {
     public PopUpPage(AppiumDriver<MobileElement> driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), popUpPageObjects);
-        waitForPageToLoad(popUpPageObjects.AlertDialogButtonsContainer);
+        waitForElementToLoad(popUpPageObjects.AlertDialogButtonsContainer);
     }
 
     public String getAllertMessage(){

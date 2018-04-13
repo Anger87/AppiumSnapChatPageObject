@@ -9,6 +9,7 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 import java.util.List;
 
 public class LandingPageObjects {
+//TODO - use different FindBy aproaches from https://github.com/appium/java-client/blob/master/docs/Page-objects.md
 
     @AndroidFindBy(id = "com.snapchat.android:id/registration_page_fragment_container")
     public MobileElement PageContainer;

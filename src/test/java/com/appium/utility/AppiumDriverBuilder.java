@@ -11,8 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.URL;
 
 public class AppiumDriverBuilder {
-    //    TODO - read capabilities from cap.properties file
-
+//TODO add iOS driver build
     AndroidDriver driver;
     ReadProperties capProperties = new ReadProperties();
 

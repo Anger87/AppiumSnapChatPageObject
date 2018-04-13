@@ -15,7 +15,7 @@ public class ProfilePage extends CommonAppiumMethods {
     public ProfilePage(AppiumDriver<MobileElement> driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), profilePageObjects);
-        waitForPageToLoad(profilePageObjects.ProfileContainer);
+        waitForElementToLoad(profilePageObjects.ProfileContainer);
     }
 
     public SettingsPage clickSettingButton(){

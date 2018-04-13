@@ -14,7 +14,7 @@ public class LandingPage extends CommonAppiumMethods {
     public LandingPage(AppiumDriver<MobileElement> driver) {
         super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), landingPageObjects);
-        waitForPageToLoad(landingPageObjects.LoginButton);
+        waitForElementToLoad(landingPageObjects.LoginButton);
     }
 
     public LoginPage clickLoginButton(){
